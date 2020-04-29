@@ -1,4 +1,4 @@
-package algorithm;
+package algo;
 //소프트웨어학과 32164959 허전진
 
 public class Quiz_greedySort {
@@ -21,7 +21,6 @@ public class Quiz_greedySort {
 		System.out.println();
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		int[] testData = {60, 25, 30, 44, 10, 92, 51, 73, 88, 7};
 		PrintArray(testData, 10);
 		GreedySort(testData, 10);

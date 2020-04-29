@@ -1,4 +1,4 @@
-package algorithm;
+package algo;
 //소프트웨어학과 허전진
 
 public class Rep2_QuickSort {
