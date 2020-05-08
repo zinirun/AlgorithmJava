@@ -1,7 +1,5 @@
 package algo;
-import java.io.File;
 import java.io.FileReader;
-import java.nio.CharBuffer;
 
 class Minheap {	// 최소 히프 클래스
 	Element heap[];     // 히프 트리 배열
@@ -151,7 +149,7 @@ class Count {
 
 	}
 
-	public void countprint()
+	public void printCount()
 	{
 		for(i=0; i<size; i++)	// 문자 출력
 			System.out.printf("%5c",alphabet[i]);
@@ -165,14 +163,14 @@ class Count {
 }
 
 class HuffmanTree {
-	public TreeNode MakeHuffmanTree() throws Exception
+	public TreeNode makeTree() throws Exception
 	{
 		Minheap heap = new Minheap(27);
 		Count count = new Count();
 		Element e1, e2, e3;
 
 		count.countfile();		// 알파벳 count
-		count.countprint();	// count result 출력
+		count.printCount();	// count result 출력
 
 		for(int i=0; i<count.size; i++)	// 빈도 수 작은 것부터 heap insert
 		{
@@ -200,7 +198,7 @@ class HuffmanTree {
 	}
 
 
-	public void HuffmanPrint(TreeNode root, String str) // Huffman code 출력
+	public void print(TreeNode root, String str) // Huffman code 출력
 	{
 		if(root == null)
 		{
@@ -214,23 +212,23 @@ class HuffmanTree {
 		{
 			String code = str;
 			code += "0";
-			HuffmanPrint(root.leftChild, code);
+			print(root.leftChild, code);
 			code = str;
 			code += "1";
-			HuffmanPrint(root.rightChild, code);
+			print(root.rightChild, code);
 		}
 	}
 }
 
 public class Rep3_Huffman {
 	public static void main(String[] args) throws Exception	{
-		HuffmanTree huff = new HuffmanTree(); // Huffman Tree 선언
+		HuffmanTree hf = new HuffmanTree(); // Huffman Tree 선언
 		String str = ""; // Code 출력할 str 초기화
 		TreeNode root =new TreeNode(); 
 
-		root = huff.MakeHuffmanTree();
+		root = hf.makeTree();
 		System.out.println("Huffman Code");
-		huff.HuffmanPrint(root, str);
+		hf.print(root, str);
 	}
 }
 
