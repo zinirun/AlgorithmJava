@@ -60,7 +60,7 @@ class EditString {
          }
       }
       
-      System.out.println("** cost table **"); // cost table 출력
+      System.out.println("**** cost table ****"); // cost table 출력
       System.out.print("   ");
       for (int i = 0; i <= Ly; i++) {
          System.out.print(i + "  ");
@@ -76,7 +76,7 @@ class EditString {
       }
 
       System.out.println();
-      System.out.println("** edit table **"); // edit table 출력
+      System.out.println("**** edit table ****"); // edit table 출력
       System.out.print("   ");
       for (int i = 0; i <= Ly; i++) { 
          System.out.print(i + "  ");
@@ -141,7 +141,7 @@ public class Rep4_EditString {
       
       System.out.println();
       
-      EditString esc = new EditString(n, m, X, Y, c, i, d);
+      EditString es = new EditString(n, m, X, Y, c, i, d);
       
       sc.close();
    }
