@@ -3,18 +3,20 @@ package algo;
 public class mColoringTest {
 
 	public static void main(String[] args) {
-		int n = 4 ;     // 정점의갯수, 교재의 예
-		int m = 2 ;     // 색의 수
-		int adjM[][] = new int[n+1][n+1] ;  // 그래프의 인접행렬
+		int n = 5 ;     // �젙�젏�쓽媛��닔, 援먯옱�쓽 �삁
+		int m = 3 ;     // �깋�쓽 �닔
+		int adjM[][] = new int[n+1][n+1] ;  // 洹몃옒�봽�쓽 �씤�젒�뻾�젹
 		
 		for(int i=1; i<=n; i++)
 			for(int j=1; j<=n; j++)
-				adjM[i][j] = 0 ;        // 인접행렬의 초기화
+				adjM[i][j] = 0 ;        // �씤�젒�뻾�젹�쓽 珥덇린�솕
 		
-		adjM[1][2] = 1 ;   adjM[2][1] = 1 ;    // 무방향 간선이 있음을 의미(교재의 예)
+		adjM[1][2] = 1 ;   adjM[2][1] = 1 ;    // 臾대갑�뼢 媛꾩꽑�씠 �엳�쓬�쓣 �쓽誘�(援먯옱�쓽 �삁)
 		adjM[2][3] = 1 ;   adjM[3][2] = 1 ;
-		adjM[3][4] = 1 ;   adjM[4][3] = 1 ;
-		adjM[4][1] = 1 ;   adjM[1][4] = 1 ;
+		adjM[2][4] = 1 ;   adjM[4][2] = 1 ;
+		adjM[4][5] = 1 ;   adjM[5][4] = 1 ;
+		adjM[1][3] = 1 ;   adjM[3][1] = 1 ;
+		adjM[3][5] = 1 ;   adjM[5][3] = 1 ;
 
 		mColoringClass mc = new mColoringClass(adjM, n, m) ;
 	}
