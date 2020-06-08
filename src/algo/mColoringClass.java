@@ -1,3 +1,4 @@
+package algo;
 
 public class mColoringClass {
 
@@ -9,8 +10,8 @@ public class mColoringClass {
 		G = arr;
 		n = numV;
 		m = numC;
-		x = new int [n+1];
-		
+		x = new int [n+1];		
+
 		for (int i=1; i<=n; i++) {
 			x[i] = 0 ;			 // x[i] 의  초기화
 		}
