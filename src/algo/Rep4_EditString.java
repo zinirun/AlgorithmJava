@@ -25,11 +25,11 @@ class EditString {
       edit[0][0] = '-';
 
       for (int i = 1; i <= Lx; i++) { // 첫 번째 열은 삭제연산만 적용
-         cost[i][0] = cost[i - 1][0] + 1;
+         cost[i][0] = cost[i - 1][0] + d_cost;
          edit[i][0] = 'D';
       }
       for (int j = 1; j <= Ly; j++) { // 첫번째 행은 삽입연산만 적용
-         cost[0][j] = cost[0][j - 1] + 1;
+         cost[0][j] = cost[0][j - 1] + i_cost;
          edit[0][j] = 'I';
       }
 
